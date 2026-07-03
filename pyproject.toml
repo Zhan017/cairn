@@ -1,14 +1,14 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "cairn"
 version = "0.0.1"
-description = "A distributed, replicated key/value store, built from scratch in Python."
+description = "Building a distributed, replicated key/value store from scratch in Python — currently a Phase 0 walking skeleton."
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "MIT" }
+license = "MIT"
 authors = [{ name = "Zhan" }]
 keywords = ["key-value-store", "raft", "distributed-systems", "storage-engine"]
 

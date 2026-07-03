@@ -1,19 +1,12 @@
-# 2026-06-30 — Phase 0: setup
+# 2026-06-30 — Project start
 
-Starting a 12-month push toward world-class depth, built around this project (`cairn`, a distributed key/value store in **Python**).
+`cairn` begins: a distributed key/value store built from scratch in Python, grown over four phases — single-node storage engine, Raft replication, production hardening, end-to-end design synthesis. Each phase has binary exit criteria; each ships a design doc and a write-up.
 
 **Done**
 - Created the project and this build log.
 
-**Next (Phase 0 — do inside the first weekly slot)**
-- Lock a fixed weekly study slot on the calendar — the recurring event is the deliverable.
-- Fill in the baseline self-assessment (all 18 rows, one falsifiable note each) and name the top-3 weakest areas.
-- Get *Designing Data-Intensive Applications, 2nd ed.*
-- Seed the Anki deck with 10 cards from DDIA Ch. 1.
+**Next**
+- Sketch the Phase 1 storage-engine design in `docs/design/`: Bitcask-style append-only log + in-memory hash index, on-disk record format, and the crash-recovery story (what happens to a half-written record on `kill -9`).
+- Ground the design in DDIA 2e Ch. 3 and the original Bitcask paper before writing code.
 
-**Then**
-- Begin DDIA Part I, Chapter 1.
-- Sketch the Phase 1 storage-engine design (append-only log + hash index, Python) in `docs/design/`.
-
-**Note to self**
-Control the inputs — show up for the weekly slot. The outcome takes care of itself. A one-line "skipped — startup fire" entry here is evidence of a real practitioner, not a failure.
+This log gets a dated entry every week — what shipped, what's still fuzzy, next week's single item. Declared pauses beat silent gaps.

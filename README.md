@@ -1,4 +1,4 @@
-# cairn — a distributed key/value store, built from scratch
+# cairn — building a distributed key/value store from scratch
 
 [![CI](https://github.com/Zhan017/cairn/actions/workflows/ci.yml/badge.svg)](https://github.com/Zhan017/cairn/actions/workflows/ci.yml)
 
@@ -13,6 +13,8 @@
 I'm deliberately building the layer beneath the systems I use every day. `cairn` grows in four phases — a single-node storage engine, a from-scratch Raft implementation, production hardening, and a documented end-to-end design — each one closing the gap between "it works" and "I know exactly *why* it works." Notes, design docs, and write-ups live in [`/docs`](./docs).
 
 Everything is implemented **once, here, in Python**. I use MIT 6.5840 as curriculum (lectures, the Raft paper, lab specs as a design reference), not as Go labs to submit — my own test harness is the grader.
+
+**Why Python for a storage engine?** Because the goal is first-principles understanding of the algorithms and failure modes, and Python (my strongest language) maximizes iteration speed toward that goal. Performance claims will be scoped honestly as "defensible for Python," with absolute numbers published rather than hidden — owning the trade-off is part of the exercise.
 
 ## Quickstart
 

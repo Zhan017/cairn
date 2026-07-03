@@ -30,6 +30,17 @@ def test_put_then_get_roundtrip(key: bytes, value: bytes) -> None:
     assert store.get(key) == value
 
 
+def test_empty_value_is_distinct_from_missing_key() -> None:
+    # A log-structured engine with delete tombstones can conflate a zero-length
+    # record with an absent key; pin the distinction now, while it's free.
+    store = InMemoryStore()
+    store.put(b"k", b"")
+    assert store.get(b"k") == b""
+    assert store.get(b"k") is not None
+    store.delete(b"k")
+    assert store.get(b"k") is None
+
+
 def test_put_overwrites_existing_value() -> None:
     store = InMemoryStore()
     store.put(b"k", b"old")
