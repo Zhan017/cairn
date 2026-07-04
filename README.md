@@ -74,7 +74,8 @@ cairn/
 ├── tests/          # unit tests + (Phase 2) the fault-injection harness
 ├── docs/
 │   ├── design/     # design docs, one per phase
-│   └── log/        # dated build-log entries / posts
+│   ├── log/        # dated build-log entries / posts
+│   └── notes/      # active-recall reading notes (DDIA, papers)
 ├── .github/workflows/ci.yml
 ├── pyproject.toml
 ├── LICENSE
